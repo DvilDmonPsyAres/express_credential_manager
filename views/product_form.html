@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nuevo Producto</title>
+  </head>
+  <body>
+    <h2>Alta de Producto</h2>
+
+    <form action="/api/products" method="POST" enctype="multipart/form-data">
+      <input
+        type="text"
+        name="name"
+        placeholder="Producto"
+        required
+      /><br /><br />
+      <input
+        type="number"
+        step="0.01"
+        name="price"
+        placeholder="Precio"
+        required
+      /><br /><br />
+      <input
+        type="number"
+        name="quantity"
+        placeholder="Cantidad"
+        required
+      /><br /><br />
+      <input type="file" name="image" accept="image/*" /><br /><br />
+      <button type="submit">Guardar</button>
+    </form>
+
+    <form action="/api/auth/logout" method="POST">
+      <button type="submit">Cerrar sesión</button>
+    </form>
+  </body>
+</html>
